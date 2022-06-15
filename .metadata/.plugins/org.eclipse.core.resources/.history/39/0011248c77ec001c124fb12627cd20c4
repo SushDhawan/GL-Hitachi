@@ -1,0 +1,16 @@
+package com.sush.springjdbc.dao;
+
+import javax.sql.DataSource;
+
+import com.sush.springjdbc.model.Student;
+
+public interface StudentDAO {
+	
+	
+	public void setDataSource() ;   // to access the Student Table 
+	
+	public void create(String name, Integer age); 
+	
+	public Student getStudent(Integer id);
+
+}

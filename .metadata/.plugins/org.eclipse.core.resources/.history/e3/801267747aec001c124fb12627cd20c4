@@ -1,0 +1,16 @@
+package com.sush.springjdbc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class StudentMapper implements RowMapper {
+
+	@Override
+	public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

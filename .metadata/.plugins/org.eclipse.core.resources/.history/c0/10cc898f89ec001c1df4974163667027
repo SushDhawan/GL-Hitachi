@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+ http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"/>
+ 
+ <!--  Data source Initialization  -->
+
+ <bean id = "dataSource" 
+ 		class = "org.springframework.jdbc.datsource.DriverManagerDataSource">
+ 		<property name="driverClassName" value = "org.postgresql.Driver"/>
+ 		<property name="url" value="jdbc:postgresql://localhost:5432/db1"/>
+ 		<property name="username" value ="postgres"/>
+ 		<property name ="password" value = "root"/>
+ </bean>
+ 
+ <bean id = "jdbcTemplateObject" class= "StudentJdbcTemplate">
+ 	<property name= "dataSource" ref = "dataSource"/>
+ </bean>
+ 
+ </beans>
